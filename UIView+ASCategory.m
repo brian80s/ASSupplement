@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UIView+ASCategory.h"
 #import "ASPlaceholderTextView.h"
+#import "UIImage+ASCategory.h"
+#import "NSObject+ASCategory.h"
 
 @implementation UIView (ASCategory)
 

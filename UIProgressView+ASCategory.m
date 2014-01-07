@@ -7,6 +7,7 @@
 //
 
 #import "UIProgressView+ASCategory.h"
+#import "NSObject+ASCategory.h"
 
 @implementation UIProgressView (ASCategory)
 

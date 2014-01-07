@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+ASCategory.h"
+#import "NSObject+ASCategory.h"
 
 static NSString * PercentEscapedQueryStringPairMemberFromStringWithEncoding(NSString *string, NSStringEncoding encoding)
 {

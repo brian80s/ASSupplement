@@ -18,7 +18,7 @@
 	size_t miblen = 4;
 	
 	size_t size;
-	int st = sysctl(mib, miblen, NULL, &size, NULL, 0);
+	int st = 0;//sysctl(mib, miblen, NULL, &size, NULL, 0);
 	
 	struct kinfo_proc * process = NULL;
 	struct kinfo_proc * newprocess = NULL;

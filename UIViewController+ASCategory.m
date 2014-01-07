@@ -54,21 +54,12 @@
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:[self.view buttonWithFrame:CGRectZero target:self action:action image:image]] autorelease];
 }
 
-- (void)back:(id)sender
-{
-//    UIViewController *viewController = [self.navigationController.topViewController retain];
-//    if (SystemVersionGreaterThanOrEqualTo5 == NO) {
-//        [viewController viewWillDisappear:YES];
-//    }
-//    [[GoomeEngine shareEngine] cancelAllOperations];
-    [GoomeEngine cancelOperationsWithClass:self];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-//    if (SystemVersionGreaterThanOrEqualTo5 == NO) {
-//        [viewController viewDidDisappear:YES];
-//    }
-//    [viewController release];
+- (void)back:(id)sender{
+    if (self.navigationController && [self.navigationController.viewControllers count] > 1) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (CGRect)mainBounds

@@ -8,6 +8,8 @@
 
 #import "UINavigationBar+ASCategory.h"
 #import "UIView+ASCategory.h"
+#import "UIImage+ASCategory.h"
+#import "NSObject+ASCategory.h"
 
 @implementation UINavigationBar (ASCategory)
 

@@ -274,8 +274,8 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 // Adapted from http://snipplr.com/view/2771/compare-two-version-strings
 - (NSComparisonResult)compareToVersionString:(NSString *)version {
 	// Break version into fields (separated by '.')
-	NSMutableArray *leftFields  = [[NSMutableArray alloc] initWithArray:[self  componentsSeparatedByString:@"."]];
-	NSMutableArray *rightFields = [[NSMutableArray alloc] initWithArray:[version componentsSeparatedByString:@"."]];
+	NSMutableArray *leftFields  = [[[NSMutableArray alloc] initWithArray:[self  componentsSeparatedByString:@"."]] autorelease];
+	NSMutableArray *rightFields = [[[NSMutableArray alloc] initWithArray:[version componentsSeparatedByString:@"."]] autorelease];
 	
 	// Implict ".0" in case version doesn't have the same number of '.'
 	if ([leftFields count] < [rightFields count]) {

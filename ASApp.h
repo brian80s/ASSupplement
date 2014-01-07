@@ -20,6 +20,8 @@
 
 - (NSURL *)commentURL;
 
+- (NSURL *)lookupURL;
+
 - (NSString *)localVersion;
 
 - (NSString *)appVersion;

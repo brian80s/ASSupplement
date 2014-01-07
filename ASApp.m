@@ -7,6 +7,7 @@
 //
 
 #import "ASApp.h"
+#import "NSObject+ASCategory.h"
 
 @implementation ASApp
 
@@ -22,13 +23,15 @@
 }
 
 - (NSURL *)downloadURL{
-    return [NSURL URLWithString:@"http://t.gpsoo.net/edd"];
-//    return [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%d?mt=8",kAppleID]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%d?mt=8",kAppleID]];
 }
 
 - (NSURL *)androidDownloadURL{
-    return [NSURL URLWithString:@"http://t.gpsoo.net/abc"];
-//    return [NSURL URLWithString:@"http://download.goome.net/coomix/android/BusOnline.apk"];
+    return [NSURL URLWithString:@"http://download.goome.net/coomix/android/BusOnline.apk"];
+}
+
+- (NSURL *)lookupURL{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%d",kAppleID]];
 }
 
 - (NSURL *)commentURL{
@@ -42,7 +45,7 @@
 }
 
 - (NSString *)localVersion{
-    NSString *version = [kUD objectForKey:@"version"];
+    NSString *version = [[NSUserDefaults standardUserDefaults] objectForKey:@"version"];
     return version;
 }
 

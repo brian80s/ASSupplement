@@ -7,6 +7,8 @@
 //
 
 #import "NSMutableArray+ASCategory.h"
+#import "NSDictionary+ASCategory.h"
+#import "NSArray+ASCategory.h"
 
 @implementation NSMutableArray (ASCategory)
 
